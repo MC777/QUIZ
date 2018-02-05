@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QUIZ</string>
+    <string name="Węch">Smell</string>
+    <string name="Wzrok">Eyesight</string>
+    <string name="Uśmiech">Smile</string>
+    <string name="Słuch">Hearing</string>
+    <string name="ZATWIERDŹ">SUBMIT</string>
+    <string name="WYZERUJ">RESET</string>
+    <string name="Question1">1. How many triangles are in a given picture?</string>
+    <string name="Question2">2. Please provide the last number: 1-2-4-7-11-16-22-?</string>
+    <string name="Question3">3. Which 3 words are related to each other?</string>
+    <string name="Question4">4. Which shape will complement the pattern?</string>
+    <string name="Question5">5. Enter the result of the action: (2 * 3 + 5) + 2 * (3 + 5) =?</string>
+    <string name="Question6">6. What number will be the result of the last action?</string>
+    <string name="Question7">7. Please provide the result of the action.</string>
+</resources>

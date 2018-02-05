@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QUIZ</string>
+    <string name="Węch">Węch</string>
+    <string name="Wzrok">Wzrok</string>
+    <string name="Uśmiech">Uśmiech</string>
+    <string name="Słuch">Słuch</string>
+    <string name="ZATWIERDŹ">ZATWIERDŹ</string>
+    <string name="WYZERUJ">RESET</string>
+    <string name="Question1">1. Ile trójkątów znajduje się na danym obrazku</string>
+    <string name="Question2">2. Podaj ostatnią liczbę: 1-2-4-7-11-16-22-?</string>
+    <string name="Question3">3. Które 3 słowa są ze sobą powiązane?</string>
+    <string name="Question4">4. Który kształt uzupełni wzór?</string>
+    <string name="Question5">5. Podaj wynik działania: (2 * 3 + 5) + 2 * (3 + 5) = ?</string>
+    <string name="Question6">6. Jaka liczba będzie wynikiem ostatniego działania?</string>
+    <string name="Question7">7. Podaj wynik działania.</string>
+</resources>
