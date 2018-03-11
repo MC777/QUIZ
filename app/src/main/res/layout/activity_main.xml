@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dummy_id"
     android:layout_width="match_parent"
@@ -18,8 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
-        android:layout_marginTop="3dp"
-        android:progress="30" />
+        android:layout_marginTop="3dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,42 +25,38 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16sp"
-                android:text="@string/Question1"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question1" />
 
             <ImageView
-                android:id="@+id/iletrojkotow"
+                android:id="@+id/img_triangles"
                 android:layout_width="320dp"
                 android:layout_height="260dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:src="@drawable/iletrojkotow" />
+                android:src="@drawable/image_triangles"
+                tools:ignore="ContentDescription" />
 
             <RadioGroup
                 android:id="@+id/radio_group2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/view_below"
+                android:layout_marginLeft="16dp"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/AnswerOneOne_RadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="16dp"
+
                     android:layout_weight="1"
                     android:onClick="changeProgress1"
-                    android:text="9" />
+                    android:text="@string/Question1_radio_btn_1" />
 
                 <RadioButton
                     android:id="@+id/AnswerOneOTwo_RadioButton"
@@ -70,7 +64,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:onClick="changeProgress1"
-                    android:text="10" />
+                    android:text="@string/Question1_radio_btn_2" />
 
                 <RadioButton
                     android:id="@+id/AnswerOneThree_RadioButton"
@@ -78,7 +72,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:onClick="changeProgress1"
-                    android:text="11" />
+                    android:text="@string/Question1_radio_btn_3" />
 
                 <RadioButton
                     android:id="@+id/AnswerOneFour_RadioButton"
@@ -86,7 +80,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:onClick="changeProgress1"
-                    android:text="12" />
+                    android:text="@string/Question1_radio_btn_4" />
 
                 <RadioButton
                     android:id="@+id/AnswerOneFive_RadioButton"
@@ -94,101 +88,67 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:onClick="changeProgress1"
-                    android:text="13" />
+                    android:text="@string/Question1_radio_btn_5" />
             </RadioGroup>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16sp"
-                android:text="@string/Question2"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question2" />
+
+            <TextView
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question2_line_1" />
 
             <EditText
                 android:id="@+id/AnswerTwoOne"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:hint="Number"
-                android:imeOptions="actionDone"
-                android:inputType="number" />
+                style="@style/CustomEditTextStyle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16dp"
-                android:text="@string/Question3"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question3" />
 
             <CheckBox
                 android:id="@+id/t1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                style="@style/CustomCheckBoxTextStyle"
                 android:onClick="changeProgress3"
-                android:paddingLeft="24dp"
-                android:text="@string/Węch"
-                android:textSize="16sp" />
+                android:text="@string/checkbox1_Smell" />
 
             <CheckBox
                 android:id="@+id/t2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                style="@style/CustomCheckBoxTextStyle"
                 android:onClick="changeProgress3"
-                android:paddingLeft="24dp"
-                android:text="@string/Wzrok"
-                android:textSize="16sp" />
+                android:text="@string/checkbox2_Eyesight" />
 
             <CheckBox
                 android:id="@+id/t3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                style="@style/CustomCheckBoxTextStyle"
                 android:onClick="changeProgress3"
-                android:paddingLeft="24dp"
-                android:text="@string/Uśmiech"
-                android:textSize="16sp" />
+                android:text="@string/checkbox3_Smile" />
 
             <CheckBox
                 android:id="@+id/t4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                style="@style/CustomCheckBoxTextStyle"
                 android:onClick="changeProgress3"
-                android:paddingLeft="24dp"
-                android:text="@string/Słuch"
-                android:textSize="16sp" />
+                android:text="@string/checkbox4_Hearing" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16sp"
-                android:text="@string/Question4"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question4" />
 
             <ImageView
-                android:id="@+id/wzor"
+                android:id="@+id/img_pattern"
                 android:layout_width="250dp"
                 android:layout_height="350dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
-                android:src="@drawable/wzor" />
+                android:src="@drawable/image_pattern"
+                tools:ignore="ContentDescription" />
 
             <RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/view_below"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -196,134 +156,72 @@
                     android:id="@+id/AnswerFourOne_RadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="16dp"
                     android:onClick="changeProgress4"
-                    android:text="A" />
+                    android:text="@string/Question4_radio_btn_1" />
 
                 <RadioButton
                     android:id="@+id/AnswerFourTwo_RadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:onClick="changeProgress4"
-                    android:text="B" />
+                    android:text="@string/Question4_radio_btn_2" />
             </RadioGroup>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16dp"
-                android:text="@string/Question5"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question5" />
+
+            <TextView
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question5_line_1" />
 
             <EditText
                 android:id="@+id/AnswerFiveOne"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:hint="Number"
-                android:imeOptions="actionDone"
-                android:inputType="number" />
+                style="@style/CustomEditTextStyle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16dp"
-                android:text="@string/Question6"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question6" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="2 + 3 = 10"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question6_line_1" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="7 + 2 = 63"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question6_line_2" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="6 + 5 = 66"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question6_line_3" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="8 + 4 = ??"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question6_line_4" />
 
             <EditText
                 android:id="@+id/AnswerSixOne"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:hint="Number"
-                android:imeOptions="actionDone"
-                android:inputType="number" />
+                style="@style/CustomEditTextStyle" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:paddingLeft="16sp"
-                android:text="@string/Question7"
-                android:textColor="@android:color/black" />
+                style="@style/CustomTextStyle"
+                android:text="@string/Question7" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="1 + 1 + 1 + 1 + 1"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question7_line_1" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="1 + 1 + 1 + 1 + 1"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question7_line_2" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="24dp"
-                android:text="1 + 1 * 0 + 1 = ?"
-                android:textColor="@android:color/black" />
+                style="@style/CustomSubTextStyle"
+                android:text="@string/Question7_line_3" />
 
             <EditText
                 android:id="@+id/AnswerSevenOne"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:hint="Number"
-                android:imeOptions="actionDone"
-                android:inputType="number" />
+                style="@style/CustomEditTextStyle" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -331,25 +229,21 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/SubmitButton"
+                    android:id="@+id/button_submit"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
                     android:layout_weight="1"
                     android:onClick="Submit"
-                    android:text="@string/ZATWIERDŹ" />
+                    android:text="@string/button_submit" />
 
                 <Button
+                    android:id="@+id/button_reset"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
                     android:layout_weight="1"
                     android:onClick="Reset"
-                    android:text="@string/WYZERUJ" />
+                    android:text="@string/button_reset" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QUIZ</string>
-    <string name="Węch">Węch</string>
-    <string name="Wzrok">Wzrok</string>
-    <string name="Uśmiech">Uśmiech</string>
-    <string name="Słuch">Słuch</string>
-    <string name="ZATWIERDŹ">ZATWIERDŹ</string>
-    <string name="WYZERUJ">RESET</string>
+    <string name="checkbox1_Smell">Węch</string>
+    <string name="checkbox2_Eyesight">Wzrok</string>
+    <string name="checkbox3_Smile">Uśmiech</string>
+    <string name="checkbox4_Hearing">Słuch</string>
+    <string name="button_submit">ZATWIERDŹ</string>
+    <string name="button_reset">RESET</string>
     <string name="Question1">1. Ile trójkątów znajduje się na danym obrazku</string>
-    <string name="Question2">2. Podaj ostatnią liczbę: 1-2-4-7-11-16-22-?</string>
+    <string name="Question1_radio_btn_1">9</string>
+    <string name="Question1_radio_btn_2">10</string>
+    <string name="Question1_radio_btn_3">11</string>
+    <string name="Question1_radio_btn_4">12</string>
+    <string name="Question1_radio_btn_5">13</string>
+    <string name="Question2">2. Podaj ostatnią liczbę:</string>
+    <string name="Question2_line_1">1&#8211;2&#8211;4&#8211;7&#8211;11&#8211;16&#8211;22&#8211;?</string>
     <string name="Question3">3. Które 3 słowa są ze sobą powiązane?</string>
     <string name="Question4">4. Który kształt uzupełni wzór?</string>
-    <string name="Question5">5. Podaj wynik działania: (2 * 3 + 5) + 2 * (3 + 5) = ?</string>
+    <string name="Question4_radio_btn_1">A</string>
+    <string name="Question4_radio_btn_2">B</string>
+    <string name="Question5">5. Podaj wynik działania:</string>
+    <string name="Question5_line_1">(2 * 3 + 5) + 2 * (3 + 5) =?</string>
     <string name="Question6">6. Jaka liczba będzie wynikiem ostatniego działania?</string>
+    <string name="Question6_line_1">2 + 3 = 10"</string>
+    <string name="Question6_line_2">7 + 2 = 63</string>
+    <string name="Question6_line_3">6 + 5 = 66</string>
+    <string name="Question6_line_4">8 + 4 = ??</string>
     <string name="Question7">7. Podaj wynik działania.</string>
+    <string name="Question7_line_1">1 + 1 + 1 + 1 + 1</string>
+    <string name="Question7_line_2">1 + 1 + 1 + 1 + 1</string>
+    <string name="Question7_line_3">1 + 1 * 0 + 1 = ?</string>
 </resources>

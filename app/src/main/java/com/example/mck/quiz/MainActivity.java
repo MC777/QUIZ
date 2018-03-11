@@ -16,32 +16,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.inputmethod.InputMethodManager;
 
-
 public class MainActivity extends AppCompatActivity {
 
-    int score = 0;
+    int score;
     ProgressBar prg;
-    int progressStatus = 0;
-    int checkerOne = 0;
-    int checkerTwo = 0;
-    int checkerThree = 0;
-    int checkerFour = 0;
-    int checkerFive = 0;
-    int checkerSix = 0;
-    int checkerSeven = 0;
+    int progressStatus;
+    int checkerOne;
+    int checkerTwo;
+    int checkerThree;
+    int checkerFour;
+    int checkerFive;
+    int checkerSix;
+    int checkerSeven;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        prg = (ProgressBar) findViewById(R.id.progressBar);
+        prg = findViewById(R.id.progressBar);
         prg.setProgress(progressStatus);
 
         /**
          * Progress tracker 2
          */
-        EditText aTwoOneEditText = (EditText) findViewById(R.id.AnswerTwoOne);
+        EditText aTwoOneEditText = findViewById(R.id.AnswerTwoOne);
         aTwoOneEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
@@ -50,21 +49,18 @@ public class MainActivity extends AppCompatActivity {
                         checkerTwo = checkerTwo + 1;
                         progressStatus = progressStatus + 14;
                         prg.setProgress(progressStatus);
-                        return;
                     }
-
                 }
             }
         });
 
-        aTwoOneEditText = (EditText) findViewById(R.id.AnswerTwoOne);
+        aTwoOneEditText = findViewById(R.id.AnswerTwoOne);
         final EditText finalATwoOneEditText = aTwoOneEditText;
         aTwoOneEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     findViewById(R.id.AnswerTwoOne).clearFocus();
-
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(finalATwoOneEditText.getWindowToken(), 0);
                     return true;
@@ -77,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Progress tracker 5
          */
-        EditText aFiveOneEditText = (EditText) findViewById(R.id.AnswerFiveOne);
+        EditText aFiveOneEditText = findViewById(R.id.AnswerFiveOne);
         aFiveOneEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
@@ -86,21 +82,18 @@ public class MainActivity extends AppCompatActivity {
                         checkerFive = checkerFive + 1;
                         progressStatus = progressStatus + 14;
                         prg.setProgress(progressStatus);
-                        return;
                     }
-
                 }
             }
         });
 
-        aFiveOneEditText = (EditText) findViewById(R.id.AnswerFiveOne);
+        aFiveOneEditText = findViewById(R.id.AnswerFiveOne);
         final EditText finalAFiveOneEditText = aFiveOneEditText;
         aFiveOneEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     findViewById(R.id.AnswerFiveOne).clearFocus();
-
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(finalAFiveOneEditText.getWindowToken(), 0);
                     return true;
@@ -113,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
          * Progress tracker 6
          */
 
-        EditText aSixOneEditText = (EditText) findViewById(R.id.AnswerSixOne);
+        EditText aSixOneEditText = findViewById(R.id.AnswerSixOne);
         aSixOneEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
@@ -122,21 +115,19 @@ public class MainActivity extends AppCompatActivity {
                         checkerSix = checkerSix + 1;
                         progressStatus = progressStatus + 14;
                         prg.setProgress(progressStatus);
-                        return;
                     }
 
                 }
             }
         });
 
-        aSixOneEditText = (EditText) findViewById(R.id.AnswerSixOne);
+        aSixOneEditText = findViewById(R.id.AnswerSixOne);
         final EditText finalASixOneEditText = aFiveOneEditText;
         aSixOneEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     findViewById(R.id.AnswerSixOne).clearFocus();
-
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(finalASixOneEditText.getWindowToken(), 0);
                     return true;
@@ -148,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Progress tracker 7
          */
-        EditText aSevenOneEditText = (EditText) findViewById(R.id.AnswerSevenOne);
+        EditText aSevenOneEditText = findViewById(R.id.AnswerSevenOne);
         aSevenOneEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
@@ -157,21 +148,18 @@ public class MainActivity extends AppCompatActivity {
                         checkerSeven = checkerSeven + 1;
                         progressStatus = progressStatus + 14;
                         prg.setProgress(progressStatus);
-                        return;
                     }
-
                 }
             }
         });
 
-        aSevenOneEditText = (EditText) findViewById(R.id.AnswerSevenOne);
+        aSevenOneEditText = findViewById(R.id.AnswerSevenOne);
         final EditText finalASevenOneEditText = aFiveOneEditText;
         aSevenOneEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     findViewById(R.id.AnswerSevenOne).clearFocus();
-
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(finalASevenOneEditText.getWindowToken(), 0);
                     return true;
@@ -186,11 +174,11 @@ public class MainActivity extends AppCompatActivity {
      * Progress tracker 1
      */
     public void changeProgress1(View view) {
-        RadioButton aOneOneRadio = (RadioButton) findViewById(R.id.AnswerOneOne_RadioButton);
-        RadioButton aOneTwoRadio = (RadioButton) findViewById(R.id.AnswerOneOTwo_RadioButton);
-        RadioButton aOneThreeRadio = (RadioButton) findViewById(R.id.AnswerOneThree_RadioButton);
-        RadioButton aOneFourRadio = (RadioButton) findViewById(R.id.AnswerOneFour_RadioButton);
-        RadioButton aOneFiveRadio = (RadioButton) findViewById(R.id.AnswerOneFive_RadioButton);
+        RadioButton aOneOneRadio = findViewById(R.id.AnswerOneOne_RadioButton);
+        RadioButton aOneTwoRadio = findViewById(R.id.AnswerOneOTwo_RadioButton);
+        RadioButton aOneThreeRadio = findViewById(R.id.AnswerOneThree_RadioButton);
+        RadioButton aOneFourRadio = findViewById(R.id.AnswerOneFour_RadioButton);
+        RadioButton aOneFiveRadio = findViewById(R.id.AnswerOneFive_RadioButton);
         boolean answerOneOne = aOneOneRadio.isChecked();
         boolean answerOneTwo = aOneTwoRadio.isChecked();
         boolean answerOneThree = aOneThreeRadio.isChecked();
@@ -202,8 +190,6 @@ public class MainActivity extends AppCompatActivity {
         if ((answerOneOne || answerOneTwo || answerOneThree || answerOneFour || answerOneFive) && test) {
             progressStatus = progressStatus + 14;
             prg.setProgress(progressStatus);
-            return;
-
         }
     }
 
@@ -211,10 +197,10 @@ public class MainActivity extends AppCompatActivity {
      * Progress tracker 3
      */
     public void changeProgress3(View view) {
-        CheckBox aThreeOneChexBox = (CheckBox) findViewById(R.id.t1);
-        CheckBox aThreeTwoChexBox = (CheckBox) findViewById(R.id.t2);
-        CheckBox aThreeThreeChexBox = (CheckBox) findViewById(R.id.t3);
-        CheckBox aThreeFourChexBox = (CheckBox) findViewById(R.id.t4);
+        CheckBox aThreeOneChexBox = findViewById(R.id.t1);
+        CheckBox aThreeTwoChexBox = findViewById(R.id.t2);
+        CheckBox aThreeThreeChexBox = findViewById(R.id.t3);
+        CheckBox aThreeFourChexBox = findViewById(R.id.t4);
         boolean answerThreeOne = aThreeOneChexBox.isChecked();
         boolean answerThreeTwo = aThreeTwoChexBox.isChecked();
         boolean answerThreeThree = aThreeThreeChexBox.isChecked();
@@ -225,8 +211,6 @@ public class MainActivity extends AppCompatActivity {
         if ((answerThreeOne || answerThreeTwo || answerThreeThree || answerThreeFour) && test3) {
             progressStatus = progressStatus + 16;
             prg.setProgress(progressStatus);
-            return;
-
         }
     }
 
@@ -235,8 +219,8 @@ public class MainActivity extends AppCompatActivity {
      * Progress tracker 4
      */
     public void changeProgress4(View view) {
-        RadioButton aFourOneRadio = (RadioButton) findViewById(R.id.AnswerFourOne_RadioButton);
-        RadioButton aFourTwoRadio = (RadioButton) findViewById(R.id.AnswerFourTwo_RadioButton);
+        RadioButton aFourOneRadio = findViewById(R.id.AnswerFourOne_RadioButton);
+        RadioButton aFourTwoRadio = findViewById(R.id.AnswerFourTwo_RadioButton);
         boolean answerFourOne = aFourOneRadio.isChecked();
         boolean answerFourTwo = aFourTwoRadio.isChecked();
         checkerFour = checkerFour + 1;
@@ -245,50 +229,35 @@ public class MainActivity extends AppCompatActivity {
         if ((answerFourOne || answerFourTwo) && test4) {
             progressStatus = progressStatus + 14;
             prg.setProgress(progressStatus);
-            return;
-
         }
     }
 
 
     public void Submit(View view) {
 
-        Button subButton = (Button) findViewById(R.id.SubmitButton);
-        RadioButton aOneOneRadio = (RadioButton) findViewById(R.id.AnswerOneOne_RadioButton);
-        RadioButton aOneTwoRadio = (RadioButton) findViewById(R.id.AnswerOneOTwo_RadioButton);
-        RadioButton aOneThreeRadio = (RadioButton) findViewById(R.id.AnswerOneThree_RadioButton);
-        RadioButton aOneFourRadio = (RadioButton) findViewById(R.id.AnswerOneFour_RadioButton);
-        RadioButton aOneFiveRadio = (RadioButton) findViewById(R.id.AnswerOneFive_RadioButton);
-        CheckBox aThreeOneChexBox = (CheckBox) findViewById(R.id.t1);
-        CheckBox aThreeTwoChexBox = (CheckBox) findViewById(R.id.t2);
-        CheckBox aThreeThreeChexBox = (CheckBox) findViewById(R.id.t3);
-        CheckBox aThreeFourChexBox = (CheckBox) findViewById(R.id.t4);
-        RadioButton aFourOneRadio = (RadioButton) findViewById(R.id.AnswerFourOne_RadioButton);
-        RadioButton aFourTwoRadio = (RadioButton) findViewById(R.id.AnswerFourTwo_RadioButton);
-        EditText aTwoOneEditText = (EditText) findViewById(R.id.AnswerTwoOne);
-        EditText aFiveOneEditText = (EditText) findViewById(R.id.AnswerFiveOne);
-        EditText aSixOneEditText = (EditText) findViewById(R.id.AnswerSixOne);
-        EditText aSevenOneEditText = (EditText) findViewById(R.id.AnswerSevenOne);
+        Button subButton = findViewById(R.id.button_submit);
+        RadioButton aOneOneRadio = findViewById(R.id.AnswerOneOne_RadioButton);
+        RadioButton aOneTwoRadio = findViewById(R.id.AnswerOneOTwo_RadioButton);
+        RadioButton aOneThreeRadio = findViewById(R.id.AnswerOneThree_RadioButton);
+        RadioButton aOneFourRadio = findViewById(R.id.AnswerOneFour_RadioButton);
+        RadioButton aOneFiveRadio = findViewById(R.id.AnswerOneFive_RadioButton);
+        CheckBox aThreeOneChexBox = findViewById(R.id.t1);
+        CheckBox aThreeTwoChexBox = findViewById(R.id.t2);
+        CheckBox aThreeThreeChexBox = findViewById(R.id.t3);
+        CheckBox aThreeFourChexBox = findViewById(R.id.t4);
+        RadioButton aFourOneRadio = findViewById(R.id.AnswerFourOne_RadioButton);
+        RadioButton aFourTwoRadio = findViewById(R.id.AnswerFourTwo_RadioButton);
+        EditText aTwoOneEditText = findViewById(R.id.AnswerTwoOne);
+        EditText aFiveOneEditText = findViewById(R.id.AnswerFiveOne);
+        EditText aSixOneEditText = findViewById(R.id.AnswerSixOne);
+        EditText aSevenOneEditText = findViewById(R.id.AnswerSevenOne);
 
         /**
          * Answer 1 for RadioButtons
          */
-        boolean answerOneOne = aOneOneRadio.isChecked();
-        boolean answerOneTwo = aOneTwoRadio.isChecked();
-        boolean answerOneThree = aOneThreeRadio.isChecked();
         boolean answerOneFour = aOneFourRadio.isChecked();
-        boolean answerOneFive = aOneFourRadio.isChecked();
-
-        if (answerOneOne) {
-            score = score;
-        } else if (answerOneTwo) {
-            score = score;
-        } else if (answerOneThree) {
-            score = score;
-        } else if (answerOneFour) {
+        if (answerOneFour) {
             score += 1;
-        } else if (answerOneFive) {
-            score = score;
         }
 
         /**
@@ -301,19 +270,12 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Answer 3 for Check Box
          */
-        boolean answerThreeOne = aThreeOneChexBox.isChecked();
-        boolean answerThreeTwo = aThreeTwoChexBox.isChecked();
-        boolean answerThreeThree = aThreeThreeChexBox.isChecked();
-        boolean answerThreeFour = aThreeFourChexBox.isChecked();
-
-        if (answerThreeOne && answerThreeTwo && answerThreeFour) {
+        if (aThreeOneChexBox.isChecked() && aThreeTwoChexBox.isChecked() && aThreeFourChexBox.isChecked()) {
             score += 1;
         }
-
         /**
          * Answer 4 for RadioButtons
          */
-        boolean answerFourOne = aFourOneRadio.isChecked();
         boolean answerFourTwo = aFourTwoRadio.isChecked();
 
         if (answerFourTwo) {
@@ -364,37 +326,35 @@ public class MainActivity extends AppCompatActivity {
 
         double scorePerc = Math.round((double) score / 7 * 100);
         Toast.makeText(this, "Your score: " + scorePerc + " %" + "\nCorrect Answers: " + score + "\nWrong Answers: " + (7 - score), Toast.LENGTH_LONG).show();
-        return;
-
     }
 
     public void Reset(View view) {
         score = 0;
 
-        Button subButton = (Button) findViewById(R.id.SubmitButton);
-        RadioButton aOneOneRadio = (RadioButton) findViewById(R.id.AnswerOneOne_RadioButton);
-        RadioButton aOneTwoRadio = (RadioButton) findViewById(R.id.AnswerOneOTwo_RadioButton);
-        RadioButton aOneThreeRadio = (RadioButton) findViewById(R.id.AnswerOneThree_RadioButton);
-        RadioButton aOneFourRadio = (RadioButton) findViewById(R.id.AnswerOneFour_RadioButton);
-        RadioButton aOneFiveRadio = (RadioButton) findViewById(R.id.AnswerOneFive_RadioButton);
-        CheckBox aThreeOneChexBox = (CheckBox) findViewById(R.id.t1);
-        CheckBox aThreeTwoChexBox = (CheckBox) findViewById(R.id.t2);
-        CheckBox aThreeThreeChexBox = (CheckBox) findViewById(R.id.t3);
-        CheckBox aThreeFourChexBox = (CheckBox) findViewById(R.id.t4);
-        RadioButton aFourOneRadio = (RadioButton) findViewById(R.id.AnswerFourOne_RadioButton);
-        RadioButton aFourTwoRadio = (RadioButton) findViewById(R.id.AnswerFourTwo_RadioButton);
-        EditText aTwoOneEditText = (EditText) findViewById(R.id.AnswerTwoOne);
-        EditText aFiveOneEditText = (EditText) findViewById(R.id.AnswerFiveOne);
-        EditText aSixOneEditText = (EditText) findViewById(R.id.AnswerSixOne);
-        EditText aSevenOneEditText = (EditText) findViewById(R.id.AnswerSevenOne);
-
+        Button subButton = findViewById(R.id.button_submit);
+        RadioButton aOneOneRadio = findViewById(R.id.AnswerOneOne_RadioButton);
+        RadioButton aOneTwoRadio = findViewById(R.id.AnswerOneOTwo_RadioButton);
+        RadioButton aOneThreeRadio = findViewById(R.id.AnswerOneThree_RadioButton);
+        RadioButton aOneFourRadio = findViewById(R.id.AnswerOneFour_RadioButton);
+        RadioButton aOneFiveRadio = findViewById(R.id.AnswerOneFive_RadioButton);
+        CheckBox aThreeOneChexBox = findViewById(R.id.t1);
+        CheckBox aThreeTwoChexBox = findViewById(R.id.t2);
+        CheckBox aThreeThreeChexBox = findViewById(R.id.t3);
+        CheckBox aThreeFourChexBox = findViewById(R.id.t4);
+        RadioButton aFourOneRadio = findViewById(R.id.AnswerFourOne_RadioButton);
+        RadioButton aFourTwoRadio = findViewById(R.id.AnswerFourTwo_RadioButton);
+        EditText aTwoOneEditText = findViewById(R.id.AnswerTwoOne);
+        EditText aFiveOneEditText = findViewById(R.id.AnswerFiveOne);
+        EditText aSixOneEditText = findViewById(R.id.AnswerSixOne);
+        EditText aSevenOneEditText = findViewById(R.id.AnswerSevenOne);
+        /**
+         * Unlocking answers
+         */
         aOneOneRadio.setEnabled(true);
         aOneTwoRadio.setEnabled(true);
         aOneThreeRadio.setEnabled(true);
         aOneFourRadio.setEnabled(true);
         aOneFiveRadio.setEnabled(true);
-
-
         aTwoOneEditText.setEnabled(true);
         aThreeOneChexBox.setEnabled(true);
         aThreeTwoChexBox.setEnabled(true);
@@ -406,18 +366,18 @@ public class MainActivity extends AppCompatActivity {
         aSixOneEditText.setEnabled(true);
         aSevenOneEditText.setEnabled(true);
         subButton.setEnabled(true);
-
-
-        RadioGroup radioGroup2 = (RadioGroup) findViewById(R.id.radio_group2);
+        /**
+         * Clearing answers
+         */
+        RadioGroup radioGroup2 = findViewById(R.id.radio_group2);
         radioGroup2.clearCheck();
         aTwoOneEditText.setText("");
         aThreeOneChexBox.setChecked(false);
         aThreeTwoChexBox.setChecked(false);
         aThreeThreeChexBox.setChecked(false);
         aThreeFourChexBox.setChecked(false);
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radio_group);
+        RadioGroup radioGroup = findViewById(R.id.radio_group);
         radioGroup.clearCheck();
-
         aFiveOneEditText.setText("");
         aSixOneEditText.setText("");
         aSevenOneEditText.setText("");
@@ -431,10 +391,7 @@ public class MainActivity extends AppCompatActivity {
         checkerSix = 0;
         checkerSeven = 0;
         progressStatus = 0;
-
         prg.setProgress(0);
         Toast.makeText(this, "Your answers have been cleaned. You could try again. ", Toast.LENGTH_SHORT).show();
-        return;
-
     }
 }
