@@ -270,8 +270,10 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Answer 3 for Check Box
          */
-        if (aThreeOneChexBox.isChecked() && aThreeTwoChexBox.isChecked() && aThreeFourChexBox.isChecked()) {
+        if (aThreeOneChexBox.isChecked() && aThreeTwoChexBox.isChecked() && aThreeFourChexBox.isChecked() && !aThreeThreeChexBox.isChecked()) {
             score += 1;
+        } else {
+            score += 0;
         }
         /**
          * Answer 4 for RadioButtons
